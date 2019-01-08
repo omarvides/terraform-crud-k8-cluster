@@ -10,7 +10,7 @@ import (
 func TestKubernetes(t *testing.T) {
 	t.Parallel()
 	terraformOptions := &terraform.Options{
-		TerraformDir: "../cluster",
+		TerraformDir: "../gcp",
 		Vars: map[string]interface{}{
 			"something": random.UniqueId(),
 		},

@@ -1,0 +1,15 @@
+module "crud-cluster" {
+  cluster_name         = "${var.cluster_name}"
+  json_cred_file       = "${var.json_cred_file}"
+  source               = "git::git@github.com:omarvides/terraform-k8s.git//gcp"
+  master_node_password = "${var.master_node_password}"
+  master_node_username = "${var.master_node_username}"
+  json_cred_file       = "${var.json_cred_file}"
+  project_id           = "${var.project_id}"
+  master_node_password = "${var.master_node_password}"
+  master_node_username = "${var.master_node_username}"
+  node_pool_name       = "${var.node_pool_name}"
+  preemptible          = "true"
+  project_id           = "${var.project_id}"
+  zone                 = "${var.zone}"
+}

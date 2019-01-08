@@ -1,4 +1,17 @@
 pipeline:
   test:
     image: golang:1.11.4-alpine3.8
-    plan: false
+
+
+# pipeline:
+#   acceptance:
+#     image: cozero/tf-acceptance-testing:terratest
+#     commands:
+#       - mkdir -p $GOPATH/src/github.com/omarvides/terraform-crud-k8-cluster
+#       - cp -r . $GOPATH/src/github.com/omarvides/terraform-crud-k8-cluster
+#       - cd $GOPATH/src/github.com/omarvides/terraform-crud-k8-cluster/tests
+#       - go get -u github.com/golang/dep/cmd/dep
+#       - dep ensure
+#       - export TF_VAR_public_key=${TF_VAR_PUBLIC_KEY}
+#       - go test -v ./...
+#     secrets: [aws_access_key_id, aws_secret_access_key, tf_var_public_key]
